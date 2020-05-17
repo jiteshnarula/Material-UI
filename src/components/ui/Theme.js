@@ -15,16 +15,11 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    h3: {
-      fontWeight: 100,
-    },
-  },
-  MuiToolbar: {
-    root: {
-      padding: 0,
-    },
-    gutters: {
-      padding: 0,
+    tab: {
+      opacity: 1,
+      fontWeight: "bold",
+      textTransform: "none",
+      fontSize: "1rem",
     },
   },
 });

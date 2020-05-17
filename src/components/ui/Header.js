@@ -6,6 +6,20 @@ import {
   useScrollTrigger,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+import logo from "../../assets/logo.svg";
+
+//Inline CSS:
+const useStyles = makeStyles((theme) => ({
+  toolbarMargin: {
+    marginBottom: "3em",
+  },
+  disableDefaultPadding: {
+    padding: 0,
+  },
+  logo: {
+    height: "7em",
+  },
+}));
 
 // ELEVATE SCROLL
 function ElevationScroll(props) {
@@ -19,17 +33,17 @@ function ElevationScroll(props) {
   });
 }
 const Header = () => {
+  const classes = useStyles();
   return (
     <Fragment>
       <ElevationScroll>
         <AppBar position="fixed">
-          <Toolbar>
-            <Typography variant="h3" color="  ">
-              Bloging Website
-            </Typography>
+          <Toolbar className={classes.disableDefaultPadding}>
+            <img src={logo} className={classes.logo} alt="Company Logo" />
           </Toolbar>
         </AppBar>
       </ElevationScroll>
+      <Toolbar className={classes.toolbarMargin} />
     </Fragment>
   );
 };

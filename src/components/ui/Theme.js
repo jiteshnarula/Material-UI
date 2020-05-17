@@ -19,6 +19,14 @@ const theme = createMuiTheme({
       fontWeight: 100,
     },
   },
+  MuiToolbar: {
+    root: {
+      padding: 0,
+    },
+    gutters: {
+      padding: 0,
+    },
+  },
 });
 
 export default theme;
